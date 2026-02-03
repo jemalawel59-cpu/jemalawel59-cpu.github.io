@@ -43,3 +43,9 @@ li {
 ul {
   padding-left: 20px;
 }
+.mosque-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
