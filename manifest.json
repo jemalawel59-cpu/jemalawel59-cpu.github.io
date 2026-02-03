@@ -1,0 +1,15 @@
+{
+  "name": "Al-Rahma Mosque",
+  "short_name": "Mosque",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2f7d32",
+  "icons": [
+    {
+      "src": "mosque.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ]
+}
