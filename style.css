@@ -18,3 +18,17 @@ body {
   width: 100%;
   max-width: 500px;
 }
+h1 {
+  color: #2f7d32;
+  text-align: center;
+}
+
+h2 {
+  color: #1b5e20;
+  margin-top: 20px;
+}
+
+p {
+  color: #333;
+  line-height: 1.6;
+}
