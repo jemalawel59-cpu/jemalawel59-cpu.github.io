@@ -1,10 +1,10 @@
-const CACHE_NAME = "mosque-cache-v1";
+const CACHE_NAME = "mosque-cache-v2";
 const urlsToCache = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./manifest.json",
-  "./mosque.jpg"
+  "/",
+  "/index.html",
+  "/style.css",
+  "/manifest.json",
+  "/mosque.jpg"
 ];
 
 self.addEventListener("install", event => {
