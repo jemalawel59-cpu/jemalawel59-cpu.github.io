@@ -1,51 +1,40 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: #f2f7f2;
 }
 
 .container {
-  max-width: 700px;
-  margin: 20px auto;
-  background: #ffffff;
-  padding: 20px;
+  max-width: 420px;
+  margin: auto;
+  padding: 16px;
+  background: white;
+}
+
+.title {
+  text-align: center;
+  color: #0b7a3b;
+}
+
+.hero {
+  width: 100%;
   border-radius: 10px;
 }
 
-.mosque-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 500px;
-}
-h1 {
-  color: green;
+.welcome {
   text-align: center;
-}
-}
-
-h2 {
-  color: #1b5e20;
-  margin-top: 20px;
+  font-size: 18px;
+  margin: 15px 0;
 }
 
-p {
-  color: #333;
-  line-height: 1.6;
-}
-.prayer-times {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.prayer-box {
+.card {
   background: #e8f5e9;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin-top: 0;
   color: #1b5e20;
-  padding: 12px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
