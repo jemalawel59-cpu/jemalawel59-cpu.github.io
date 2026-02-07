@@ -11,9 +11,12 @@ body {
   background: white;
 }
 
-.title {
+..title {
   text-align: center;
   color: #0b7a3b;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .hero {
