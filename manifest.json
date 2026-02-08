@@ -3,7 +3,7 @@
   "short_name": "Al-Rahma",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#eaf6ea",
+  "background_color": "#f3f8f3",
   "theme_color": "#2e7d32",
   "icons": [
     {
