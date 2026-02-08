@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Al-Rahma Mosque</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b5e20">
 
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
@@ -20,6 +22,7 @@
     <p class="welcome">
       Welcome to Al-Rahma Mosque official website.
     </p>
+
     <section class="card">
       <h2>🕋 Prayer Times</h2>
       <ul>
@@ -35,43 +38,29 @@
       <h2>📢 Announcements</h2>
       <p>Friday khutbah starts at 1:00 PM.</p>
     </section>
-    <button id="installBtn" class="install-btn" hidden>
-  📲 Install App
-    </button>
+
+    <button id="installBtn" class="install-btn">📲 Install App</button>
 
   </div>
 
   <script>
-    // Offline message
-    const offlineMsg = document.getElementById("offline");
-    function updateStatus() {
-      offlineMsg.style.display = navigator.onLine ? "none" : "block";
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
     }
-    window.addEventListener("load", updateStatus);
-    window.addEventListener("online", updateStatus);
-    window.addEventListener("offline", updateStatus);
 
-    // Register Service Worker
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js");
-    }
-    <script>
-  let deferredPrompt;
-  const installBtn = document.getElementById("installBtn");
+    let deferredPrompt;
+    const installBtn = document.getElementById("installBtn");
 
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.hidden = false;
-  });
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = "block";
+    });
 
-  installBtn.addEventListener("click", async () => {
-    installBtn.hidden = true;
-    await deferredPrompt.prompt();
-    deferredPrompt = null;
-  });
-</script>
+    installBtn.addEventListener('click', () => {
+      deferredPrompt.prompt();
+    });
   </script>
-  
+
 </body>
 </html>
