@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Al-Rahma Mosque</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
 </head>
@@ -14,8 +16,13 @@
     <h1 class="title">Al-Rahma Mosque</h1>
 
     <img src="mosque.jpg" alt="Masjid" class="hero">
+
     <p class="welcome">
       Welcome to Al-Rahma Mosque official website.
+    </p>
+
+    <p id="offline" class="offline">
+      ⚠️ You are offline. Some information may not be updated.
     </p>
 
     <section class="card">
@@ -35,6 +42,22 @@
     </section>
 
   </div>
+
+  <script>
+    // Offline message
+    const offlineMsg = document.getElementById("offline");
+    function updateStatus() {
+      offlineMsg.style.display = navigator.onLine ? "none" : "block";
+    }
+    window.addEventListener("load", updateStatus);
+    window.addEventListener("online", updateStatus);
+    window.addEventListener("offline", updateStatus);
+
+    // Register Service Worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
 
 </body>
 </html>
