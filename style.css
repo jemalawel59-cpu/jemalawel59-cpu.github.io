@@ -61,3 +61,18 @@ body {
 .card li {
   margin-bottom: 6px;
 }
+.install-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.install-btn:hover {
+  background: #1b5e20;
+}
