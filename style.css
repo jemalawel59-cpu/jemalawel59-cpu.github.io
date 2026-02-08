@@ -11,10 +11,13 @@ body {
   background: #ffffff;
 }
 
-.title {
+..title {
   text-align: center;
   color: #2e7d32;
   margin: 10px 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
 }
 
 .hero {
